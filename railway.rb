@@ -7,11 +7,11 @@ class Railway < Formula
 
   if OS.mac?
     url "https://github.com/railwayapp/cli/releases/download/v0.0.4/railway_0.0.4_darwin_amd64.tar.gz"
-    sha256 "48b53b1834007cc8a7160ef898b9ba289678c2e155547da788d091e602be0f61"
+    sha256 "5a5d30bdc796cbcb4bfda375804174c427a315d3c4d975a65a6575ef03d80080"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/railwayapp/cli/releases/download/v0.0.4/railway_0.0.4_linux_amd64.tar.gz"
-      sha256 "8af720a74d08b40cbcb1530a41b481f50d478d95b9a19733f3869b1e4ec19fe5"
+      sha256 "a3af467fde9ec1f271123294a85790aaf59e6a362e72d7717aed2ee707f40ed7"
     end
   end
 
