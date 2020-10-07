@@ -2,16 +2,16 @@
 class Railway < Formula
   desc "Develop and deploy code with zero configuration"
   homepage "https://railway.app"
-  version "0.1.1"
+  version "0.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/railwayapp/cli/releases/download/v0.1.1/railway_0.1.1_darwin_amd64.tar.gz"
-    sha256 "8503d505b566358014b09e0138947791692d190735e44e36f11143add3c8a65f"
+    url "https://github.com/railwayapp/cli/releases/download/v0.1.2/railway_0.1.2_darwin_amd64.tar.gz"
+    sha256 "9df79614b64441ea26e923f324619593940734d186714cd89081c1ae8874296a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v0.1.1/railway_0.1.1_linux_amd64.tar.gz"
-      sha256 "e06e14a3f88a707807112809370d813ff3b326976943a9efe512aec822e4c314"
+      url "https://github.com/railwayapp/cli/releases/download/v0.1.2/railway_0.1.2_linux_amd64.tar.gz"
+      sha256 "4f04b2e740b54fa0932cafcb83f25a6685c515d695857cd886b9a8d7dd90eea7"
     end
   end
 
