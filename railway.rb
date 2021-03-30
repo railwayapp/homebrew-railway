@@ -5,24 +5,24 @@
 class Railway < Formula
   desc "Develop and deploy code with zero configuration"
   homepage "https://railway.app"
-  version "0.1.36"
+  version "0.1.37"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/railwayapp/cli/releases/download/v0.1.36/railway_0.1.36_darwin_amd64.tar.gz"
-    sha256 "9d328b3a1a817bd66055eba5e2f604638092116e08a939b286a8042ab7d77c8b"
+    url "https://github.com/railwayapp/cli/releases/download/v0.1.37/railway_0.1.37_darwin_amd64.tar.gz"
+    sha256 "51eb0796d58e6a1e1ea1d3328784d8654f4e864f3090fcf5fbcc8ad69e6e3fea"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/railwayapp/cli/releases/download/v0.1.36/railway_0.1.36_darwin_arm64.tar.gz"
-    sha256 "ee6503400a3fcde9bc2256547ea5d1700772c5d1e7695b252daaab3d07951d2d"
+    url "https://github.com/railwayapp/cli/releases/download/v0.1.37/railway_0.1.37_darwin_arm64.tar.gz"
+    sha256 "362501afe06c0e9defcdf78e6a4ae7f394a2c190cc798620ee454091edfea3f2"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/railwayapp/cli/releases/download/v0.1.36/railway_0.1.36_linux_amd64.tar.gz"
-    sha256 "871b52b6e3910c86f67537aac9e73875bdba78489bbb10338ecf0be59617ca02"
+    url "https://github.com/railwayapp/cli/releases/download/v0.1.37/railway_0.1.37_linux_amd64.tar.gz"
+    sha256 "24ac90cc0e60bd394afa025087899780aff7f0dd3112c72d41970365bb3e2f80"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/railwayapp/cli/releases/download/v0.1.36/railway_0.1.36_linux_arm64.tar.gz"
-    sha256 "36c656d4459be24fb4bd2f8927ccef7f62b977fc6962913be3f623c2d619c239"
+    url "https://github.com/railwayapp/cli/releases/download/v0.1.37/railway_0.1.37_linux_arm64.tar.gz"
+    sha256 "1416aba412269b6a549a0275d303f59c7ce2bb2cd71604fce2a951b71b1cec40"
   end
 
   def install
