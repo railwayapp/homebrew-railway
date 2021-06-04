@@ -5,24 +5,29 @@
 class Railway < Formula
   desc "Develop and deploy code with zero configuration"
   homepage "https://railway.app"
-  version "0.2.25"
+  version "0.2.26"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/railwayapp/cli/releases/download/v0.2.25/railway_0.2.25_darwin_amd64.tar.gz"
-    sha256 "b1471df0bec73fedcec6cf27c0eed5877c246c8c4d1586bceefb80f04e8b5d62"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/railwayapp/cli/releases/download/v0.2.26/railway_0.2.26_darwin_amd64.tar.gz"
+      sha256 "eea8e0265ee3ef1018b483db543bdcae8c5fe12ec07475deec8e4f3966c4cac6"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/railwayapp/cli/releases/download/v0.2.26/railway_0.2.26_darwin_arm64.tar.gz"
+      sha256 "c4d864ba3f6b07fda9ba06c4e97ca6427adb99b3f7ab23d7b117a40a5fe189dc"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/railwayapp/cli/releases/download/v0.2.25/railway_0.2.25_darwin_arm64.tar.gz"
-    sha256 "c09f543e23cf60602b02d9d720910ce941dca9bb2644642b0bc9985b7aa6e949"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/railwayapp/cli/releases/download/v0.2.25/railway_0.2.25_linux_amd64.tar.gz"
-    sha256 "96a226e4b70383b2aa74e82257305a858daa37716b4bf1833899850003709d1d"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/railwayapp/cli/releases/download/v0.2.25/railway_0.2.25_linux_arm64.tar.gz"
-    sha256 "8558f44b4c87c44a3ffcb5426f185693bbd5015dfc57b298e92a55d76b67377e"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/railwayapp/cli/releases/download/v0.2.26/railway_0.2.26_linux_amd64.tar.gz"
+      sha256 "baddf7712a815ec346e7d4f4a36f414db9d50137ab66f9f1d30ed199823d6066"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/railwayapp/cli/releases/download/v0.2.26/railway_0.2.26_linux_arm64.tar.gz"
+      sha256 "7a7e62090dafd52e7e0c217a8067eb90590af3baeadda2000ddbfb1c745ad189"
+    end
   end
 
   def install
