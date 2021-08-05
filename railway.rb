@@ -11,22 +11,22 @@ class Railway < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/railwayapp/cli/releases/download/v0.2.42/railway_0.2.42_darwin_amd64.tar.gz"
-      sha256 "394c46ed7a1292c943d29c86ec40a49aa85ea918dce63428460dd5579621447e"
+      sha256 "39e7e7dcdbffb9b0df4b0e063f18247b5af592cbc951754d78a37ebb267fb71c"
     end
     if Hardware::CPU.arm?
       url "https://github.com/railwayapp/cli/releases/download/v0.2.42/railway_0.2.42_darwin_arm64.tar.gz"
-      sha256 "d90a9de5fc5fe126462d0249977b5b21517b727455c4cd37ff4455a570e546ec"
+      sha256 "d685318e3b37979bcff4accf57f1c664fcf83512d2c08107ceb8671b4fae1a48"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/railwayapp/cli/releases/download/v0.2.42/railway_0.2.42_linux_amd64.tar.gz"
-      sha256 "a13206f1d83affd01bb80c794c6b83ecf929be3cf0af25f36de7c7fda0612c3b"
+      sha256 "ce9cee372185d266467e8f7a6ed6473d8b128fd6aac25789583c90ffda59b34d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/railwayapp/cli/releases/download/v0.2.42/railway_0.2.42_linux_arm64.tar.gz"
-      sha256 "e259645854741061a6139114be19412ca6b2340b68a23248dddb230127e5bc2d"
+      sha256 "1bd131b171fd650d07a1ba79f397f5e340a03eeb1cb916a4fad0508712c4ffee"
     end
   end
 
