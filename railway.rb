@@ -6,7 +6,6 @@ class Railway < Formula
   desc "Develop and deploy code with zero configuration"
   homepage "https://railway.app"
   version "0.2.45"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
