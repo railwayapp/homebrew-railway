@@ -5,20 +5,20 @@
 class Railway < Formula
   desc "Develop and deploy code with zero configuration"
   homepage "https://railway.app"
-  version "1.7.2"
+  version "1.7.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v1.7.2/railway_1.7.2_darwin_amd64.tar.gz"
-      sha256 "91cfa4cb797ba7436f3d0f4e56c244445e16a4f78eec2a5f90f6e0f968645edd"
+      url "https://github.com/railwayapp/cli/releases/download/v1.7.3/railway_1.7.3_darwin_amd64.tar.gz"
+      sha256 "e41c900db4b7246ef58bf06bd7f2db8fd1ae59499cce62b53576b778bf0adc5b"
 
       def install
         bin.install "railway"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/railwayapp/cli/releases/download/v1.7.2/railway_1.7.2_darwin_arm64.tar.gz"
-      sha256 "fea7cf668c14b3ee6fc53a99b520dc96b673efd934a50dfa8afbaf880fbb36f5"
+      url "https://github.com/railwayapp/cli/releases/download/v1.7.3/railway_1.7.3_darwin_arm64.tar.gz"
+      sha256 "143ca9b066d97403cd7e4517a2efcd8169d7c1d534936f16c03c71650c442839"
 
       def install
         bin.install "railway"
@@ -28,16 +28,16 @@ class Railway < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v1.7.2/railway_1.7.2_linux_amd64.tar.gz"
-      sha256 "5bcbfb724365bce7e7629ac2581400ec596a00919d4a5df4660fe946ee1baaa6"
+      url "https://github.com/railwayapp/cli/releases/download/v1.7.3/railway_1.7.3_linux_amd64.tar.gz"
+      sha256 "6b3fab71e2fbd32bded0546d757384a368aeb22fd964a86c2c8e0770740ef6e1"
 
       def install
         bin.install "railway"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/railwayapp/cli/releases/download/v1.7.2/railway_1.7.2_linux_arm64.tar.gz"
-      sha256 "09a862d285b2733d1ea10cc0c248f79385799074d1e9893f21425bd681f12cba"
+      url "https://github.com/railwayapp/cli/releases/download/v1.7.3/railway_1.7.3_linux_arm64.tar.gz"
+      sha256 "2f399436bb2904de3ce9cda5e35c38782b1cc961960c6fb9818713ac8a15cb6f"
 
       def install
         bin.install "railway"
