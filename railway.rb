@@ -5,20 +5,20 @@
 class Railway < Formula
   desc "Develop and deploy code with zero configuration"
   homepage "https://railway.app"
-  version "1.7.4"
+  version "1.7.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v1.7.4/railway_1.7.4_darwin_amd64.tar.gz"
-      sha256 "28ff72809da0b6b7eac0d9304fc25864914a29d2b61adee5775a29683cbd9916"
+      url "https://github.com/railwayapp/cli/releases/download/v1.7.5/railway_1.7.5_darwin_amd64.tar.gz"
+      sha256 "a014da1f2f65d477b82d1f4b658061ce5011c7a91469e93fbbaae6ec4ddb3fd4"
 
       def install
         bin.install "railway"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/railwayapp/cli/releases/download/v1.7.4/railway_1.7.4_darwin_arm64.tar.gz"
-      sha256 "e9073bdc8677affd2c13989274e11502b8f2d5c62a83fb97839170c6858307bd"
+      url "https://github.com/railwayapp/cli/releases/download/v1.7.5/railway_1.7.5_darwin_arm64.tar.gz"
+      sha256 "2f1a53dce12dccb2f070fa6f6f414b9ec3fd9d9cba9c535e8800845155f110b5"
 
       def install
         bin.install "railway"
@@ -27,17 +27,17 @@ class Railway < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v1.7.4/railway_1.7.4_linux_amd64.tar.gz"
-      sha256 "443f28ad480e9cd65fb2bb76fbc39c9829ca71eda38ff737dc2c0e17a994d94a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/railwayapp/cli/releases/download/v1.7.5/railway_1.7.5_linux_arm64.tar.gz"
+      sha256 "aa7c21281fc143f693c097d044c1f91211491099fff2c5e48e6f7e24749f42cc"
 
       def install
         bin.install "railway"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/railwayapp/cli/releases/download/v1.7.4/railway_1.7.4_linux_arm64.tar.gz"
-      sha256 "9151e00f3d3d0ece63d4366c572b07436387717f03d57fddc3a4b44ff1df3239"
+    if Hardware::CPU.intel?
+      url "https://github.com/railwayapp/cli/releases/download/v1.7.5/railway_1.7.5_linux_amd64.tar.gz"
+      sha256 "462d1f4b9d2c525b5cd2f5e18ee8bb760dfafed2d69a105375c7ca231fb0b697"
 
       def install
         bin.install "railway"
