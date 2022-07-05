@@ -5,20 +5,20 @@
 class Railway < Formula
   desc "Develop and deploy code with zero configuration"
   homepage "https://railway.app"
-  version "1.8.2"
+  version "1.8.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v1.8.2/railway_1.8.2_darwin_amd64.tar.gz"
-      sha256 "744fe17a480629e221e529abaa6e31ff7100365e298226a0197450cbde9e9176"
+    if Hardware::CPU.arm?
+      url "https://github.com/railwayapp/cli/releases/download/v1.8.3/railway_1.8.3_darwin_arm64.tar.gz"
+      sha256 "f37df5340c1e2aff93664a128b00c2f40169b67473c2fe9b3212b7f77275e7d2"
 
       def install
         bin.install "railway"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/railwayapp/cli/releases/download/v1.8.2/railway_1.8.2_darwin_arm64.tar.gz"
-      sha256 "14d512a3fa7b6abb8fc583dc089abf203c7485619c11ba8f840aa2b53f9f7abb"
+    if Hardware::CPU.intel?
+      url "https://github.com/railwayapp/cli/releases/download/v1.8.3/railway_1.8.3_darwin_amd64.tar.gz"
+      sha256 "1136cae776a0c730044d67fde5adbafd28f4afa559623907258dbe9774eb7336"
 
       def install
         bin.install "railway"
@@ -28,16 +28,16 @@ class Railway < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v1.8.2/railway_1.8.2_linux_amd64.tar.gz"
-      sha256 "fedf6f2270815aba01a5fee66c85f30467e49dcbead89b9ed09bea2517fb292f"
+      url "https://github.com/railwayapp/cli/releases/download/v1.8.3/railway_1.8.3_linux_amd64.tar.gz"
+      sha256 "af3d4f07f96b8fe4b189995734e1ce7f03092d5d1e1e49a064fc4e58eac95fc2"
 
       def install
         bin.install "railway"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/railwayapp/cli/releases/download/v1.8.2/railway_1.8.2_linux_arm64.tar.gz"
-      sha256 "98c19e23c66b850c52dd0e7b90a75add3d1f8ce6928eb5b66f9c66bedf9aa995"
+      url "https://github.com/railwayapp/cli/releases/download/v1.8.3/railway_1.8.3_linux_arm64.tar.gz"
+      sha256 "8c694178a3f0c00dad749d384602710141fd0b463473e2d09db93150fb838c10"
 
       def install
         bin.install "railway"
