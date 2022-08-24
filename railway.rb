@@ -5,20 +5,20 @@
 class Railway < Formula
   desc "Develop and deploy code with zero configuration"
   homepage "https://railway.app"
-  version "2.0.9"
+  version "2.0.10"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v2.0.9/railway_2.0.9_darwin_amd64.tar.gz"
-      sha256 "2d2dde378a9ac4ce544b19900a9380bd30b7c31f3a4b5896085b2d70ed8e713d"
+    if Hardware::CPU.arm?
+      url "https://github.com/railwayapp/cli/releases/download/v2.0.10/railway_2.0.10_darwin_arm64.tar.gz"
+      sha256 "09568609d17636c3cf990d6b3d2366a7b528eb04137e371293b69a570acdf274"
 
       def install
         bin.install "railway"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/railwayapp/cli/releases/download/v2.0.9/railway_2.0.9_darwin_arm64.tar.gz"
-      sha256 "0010811517db0c623b9263723c532382fd4bb8492e52b43da6221e6c353483ec"
+    if Hardware::CPU.intel?
+      url "https://github.com/railwayapp/cli/releases/download/v2.0.10/railway_2.0.10_darwin_amd64.tar.gz"
+      sha256 "8c4a3f9eaae01878cdedd297f94cc1420245f95b87323eb095c6e78ad69ae07e"
 
       def install
         bin.install "railway"
@@ -27,17 +27,17 @@ class Railway < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v2.0.9/railway_2.0.9_linux_amd64.tar.gz"
-      sha256 "66b8a375232d10d3c0eb3ebe282f1ef4f6c8fde37c0ecd8978268a5ff136d22a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/railwayapp/cli/releases/download/v2.0.10/railway_2.0.10_linux_arm64.tar.gz"
+      sha256 "2d789cd809730d79bd6d42c0ab2b332e19dd9d7076718d9dc3d528181cfa8567"
 
       def install
         bin.install "railway"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/railwayapp/cli/releases/download/v2.0.9/railway_2.0.9_linux_arm64.tar.gz"
-      sha256 "ee9edc6a567246c6b7a1ce18d6c5d6ea16393ff5f66b6143099fcc2b7feb163a"
+    if Hardware::CPU.intel?
+      url "https://github.com/railwayapp/cli/releases/download/v2.0.10/railway_2.0.10_linux_amd64.tar.gz"
+      sha256 "c3477f6612bf1506e20a3b02ced95be5ccfb90575139bb6b048ae3956bfe6f94"
 
       def install
         bin.install "railway"
