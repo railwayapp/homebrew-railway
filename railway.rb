@@ -5,20 +5,20 @@
 class Railway < Formula
   desc "Develop and deploy code with zero configuration"
   homepage "https://railway.app"
-  version "2.0.10"
+  version "2.0.11"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/railwayapp/cli/releases/download/v2.0.10/railway_2.0.10_darwin_arm64.tar.gz"
-      sha256 "09568609d17636c3cf990d6b3d2366a7b528eb04137e371293b69a570acdf274"
+    if Hardware::CPU.intel?
+      url "https://github.com/railwayapp/cli/releases/download/v2.0.11/railway_2.0.11_darwin_amd64.tar.gz"
+      sha256 "d161701719356a584b4dfc8ead7b998ce0a1883dca1dd8585e2f09f6e69b3132"
 
       def install
         bin.install "railway"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v2.0.10/railway_2.0.10_darwin_amd64.tar.gz"
-      sha256 "8c4a3f9eaae01878cdedd297f94cc1420245f95b87323eb095c6e78ad69ae07e"
+    if Hardware::CPU.arm?
+      url "https://github.com/railwayapp/cli/releases/download/v2.0.11/railway_2.0.11_darwin_arm64.tar.gz"
+      sha256 "16dc82f7f4116c679660c2fc241540a6cc8305e1269ba56ccba187dbd6859c28"
 
       def install
         bin.install "railway"
@@ -28,16 +28,16 @@ class Railway < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/railwayapp/cli/releases/download/v2.0.10/railway_2.0.10_linux_arm64.tar.gz"
-      sha256 "2d789cd809730d79bd6d42c0ab2b332e19dd9d7076718d9dc3d528181cfa8567"
+      url "https://github.com/railwayapp/cli/releases/download/v2.0.11/railway_2.0.11_linux_arm64.tar.gz"
+      sha256 "ce156dc539cb4f2ce0dbcb5cdfd2eb5edbe0c3e87114c708aed1c767b9fd6ee8"
 
       def install
         bin.install "railway"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/railwayapp/cli/releases/download/v2.0.10/railway_2.0.10_linux_amd64.tar.gz"
-      sha256 "c3477f6612bf1506e20a3b02ced95be5ccfb90575139bb6b048ae3956bfe6f94"
+      url "https://github.com/railwayapp/cli/releases/download/v2.0.11/railway_2.0.11_linux_amd64.tar.gz"
+      sha256 "3fac4300f65febd1e76972fd096302e7427be07585868693c9c6f4acee3fdc42"
 
       def install
         bin.install "railway"
